@@ -1,0 +1,7 @@
+services:
+  squadcalc:
+    build: .
+    container_name: squadcalc
+    restart: unless-stopped
+    expose:
+      - "80"

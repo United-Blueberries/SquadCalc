@@ -36,6 +36,7 @@
     "lastDigits": "Kompakte Höhenanzeige",
     "LaneFinderOptions": "Routen-Finder-Optionen",
     "capZoneOnHover": "Eroberungszonen nur beim Überfahren anzeigen",
+    "mainbaseProtection": "Schutzgebiete der Hauptbasis anzeigen",
     "revealLayerOnHover": "Layer anzeigen, wenn der Mauszeiger über einer Flagge steht",
     "circlesFlags": "Flaggen als Kreise anzeigen",
     "copyNextFlags": "Nächste Flaggen automatisch in Zwischenablage kopieren",

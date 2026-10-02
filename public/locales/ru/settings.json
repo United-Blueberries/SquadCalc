@@ -36,6 +36,7 @@
     "lastDigits": "Компактное отображение высоты",
     "LaneFinderOptions": "Опции поиска полос",
     "capZoneOnHover": "Зоны при наведении",
+    "mainbaseProtection": "Показать зоны защиты основной базы",
     "revealLayerOnHover": "Показать слой при наведении на флаг",
     "circlesFlags": "Показать флаги в виде кругов",
     "copyNextFlags": "Автокопирование следующих флагов",

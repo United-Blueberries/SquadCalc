@@ -10,6 +10,7 @@ import { squadSpawnGroup } from "./squadSpawnGroup.js";
 import { squadCameraActor } from "./squadCameraActor.js";
 import { SquadVehicleSpawner } from "./squadVehicleSpawner.js";
 import SquadLaneSolver from "./squadLaneSolver.js";
+import { createMainbaseProtections, updateMainbaseProtections } from "./squadMainbaseProtection.js"; // UBG
 
 export default class SquadLayer {
 
@@ -200,6 +201,7 @@ export default class SquadLayer {
         this.createHelipads();
         this.createDeployables();
         this.createProtectionZones();
+        createMainbaseProtections(this); // UBG
         //this.createBorders();
         this.createSplineBorders();
         this.createSpawners();
@@ -1264,6 +1266,7 @@ export default class SquadLayer {
         this.flags.forEach((flag) => flag.applySolverResult(previewFlag !== null));
 
         if (previewFlag === null) this._drawPath();
+        if (previewFlag === null) updateMainbaseProtections(this); // UBG
         else this.solverResult = previousResult;
     }
 

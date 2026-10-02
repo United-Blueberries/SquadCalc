@@ -37,6 +37,7 @@
     "lineToTargetTooltip": "Проводить лінію між зброєю та ціллю",
     "LaneFinderOptions": "Параметри пошуку смуг",
     "capZoneOnHover": "Зони при наведенні",
+    "mainbaseProtection": "Показати зони захисту головної бази",
     "revealLayerOnHover": "Показати шар при наведенні на прапор",
     "circlesFlags": "Показати прапори у вигляді кіл",
     "copyNextFlags": "Автокопіювання наступних прапорів",
