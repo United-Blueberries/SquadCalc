@@ -1,6 +1,7 @@
 .git
 .gitignore
-node_modules
+**/node_modules
+.claude
 npm-debug.log
 dist
 .vscode
