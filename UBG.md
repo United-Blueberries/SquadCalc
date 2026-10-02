@@ -4,6 +4,7 @@ Fork of [sh4rkman/SquadCalc](https://github.com/sh4rkman/SquadCalc), kept curren
 
 ## Fork-only files (never conflict)
 - `src/js/squadMainbaseProtection.js` — mainbase protection (MBC) zones + all their logic (3x3 map list, show/hide rules)
+- `src/js/squad3DMainbaseProtection.js` — MBC zones in the 3D view; wraps `Squad3DSimulation.prototype._drawCapzones` instead of patching `squad3DSimulation.js`
 - `Dockerfile`, `.dockerignore`, `docker-compose.yml` (host-specific settings go in an untracked `docker-compose.override.yml` on the server)
 - `UBG.md`
 
@@ -20,4 +21,5 @@ Fork of [sh4rkman/SquadCalc](https://github.com/sh4rkman/SquadCalc), kept curren
 ## Syncing
 1. GitHub → Sync fork (or `git merge upstream/master`); resolve conflicts in the spots above.
 2. If upstream reworks flag selection again, re-check `updateMainbaseProtections()` (uses `selectedFlags`, `confirmedStep`, `perspectiveMain`, `_farMain()`, `solver.stepCount`).
-3. `npm run build`, then `docker compose up --build -d`.
+3. Open the 3D view on a layer: MBC zones must show around the mains. If not (console: `[UBG] Squad3DSimulation._drawCapzones not found`), upstream renamed it, so point the wrapper in `squad3DMainbaseProtection.js` at the new method.
+4. `npm run build`, then `docker compose up --build -d`.
