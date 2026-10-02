@@ -55,11 +55,6 @@
 
 @media (height >= 50em) {
     header {
-        .mapSelector #mapSelector {
-            .select2-results__options {
-                max-height: 650px;
-            }
-        }
         .mapSelector #layerSelector {
             .select2-results__options {
                 max-height: 650px;
