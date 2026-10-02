@@ -1,5 +1,6 @@
 import { Polyline, Rectangle, FeatureGroup, LatLngBounds, LatLng } from "leaflet";
 import { App } from "../app.js";
+import "./squad3DMainbaseProtection.js";
 
 // UBG fork: mainbase protection (MBC) zones. Everything lives in this file so upstream
 // syncs only touch the few `// UBG` hooks in squadLayer/squadObjective/squadSettings.
@@ -550,6 +551,18 @@ export class SquadMainbaseProtection extends FeatureGroup {
     refresh() {
         this._renderProtection();
         this._drawOuterBoundary();
+    }
+
+    /**
+     * Bounds of every protected cell left after the active exclusions (used by the 3D view)
+     * @returns {L.LatLngBounds[]}
+     */
+    cellBounds() {
+        const excluded = new Set([...this.activeExclusions.values()].flatMap((set) => [...set]));
+        return this._getProtectionGridCoordinates()
+            .filter(([gridX, gridY]) => !excluded.has(`${gridX},${gridY}`))
+            .map(([gridX, gridY]) => this._getGridSquareBounds(gridX, gridY))
+            .filter(Boolean);
     }
 }
 
