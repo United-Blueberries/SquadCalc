@@ -1,6 +1,7 @@
 import { animateCSS } from "./animations.js";
 import SquadFactions from "./squadFactions.js";
 import packageInfo from "../../package.json";
+import { toggleMainbaseProtections } from "./squadMainbaseProtection.js"; // UBG
 
 
 /**
@@ -258,6 +259,14 @@ export default class SquadSettings {
                 key: "settings-reveal-onHover",
                 default: true,
                 selector: "#revealLayerOnHoverSettings"
+            },
+            mainbaseProtection: { // UBG
+                key: "settings-mainbase-protection",
+                default: true,
+                selector: "#mainbaseProtectionSetting",
+                onChange: (val) => {
+                    if (this.app.minimap.layer) toggleMainbaseProtections(this.app.minimap.layer, val);
+                }
             },
             capZoneOnHover: {
                 key: "settings-capZone-onHover",

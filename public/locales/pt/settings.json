@@ -36,6 +36,7 @@
     "showHeightDiff": "Diferença de Altura",
     "LaneFinderOptions": "Opções de Layers",
     "capZoneOnHover": "Mostrar capzones apenas ao passar o mouse",
+    "mainbaseProtection": "Show Mainbase Protection Areas",
     "revealLayerOnHover": "Revelar a layer ao passar o mouse sobre uma bandeira",
     "circlesFlags": "Mostrar bandeiras como círculos",
     "copyNextFlags": "Copiar próximas bandeiras automaticamente",

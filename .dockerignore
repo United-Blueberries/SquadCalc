@@ -1,0 +1,15 @@
+.git
+.gitignore
+node_modules
+npm-debug.log
+dist
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+CONTRIBUTING.md
+LICENSE
+README.md
+SECURITY.md

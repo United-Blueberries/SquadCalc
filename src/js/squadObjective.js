@@ -6,6 +6,7 @@ import "tippy.js/dist/tippy.css";
 import { FactionCtxMenu } from "./squadFactionCtxMenu.js";
 import SquadLaneSolver from "./squadLaneSolver.js";
 import { SquadCapZone } from "./squadCapZone.js";
+import { previewMainbaseExclusion } from "./squadMainbaseProtection.js"; // UBG
 
 // Modded factionIDs are prefixed with the mod key (e.g. "SU_RGF", "WZ_RGF"), but
 // faction translations are shared with vanilla ("RGF") - strip the prefix for
@@ -528,6 +529,7 @@ export class SquadObjective {
     }
 
     _handleMouseOver() {
+        previewMainbaseExclusion(this, true); // UBG
 
         // On RAAS/Invasion, preview the lane on hover
         if (this.layer.isRandomized) {
@@ -570,6 +572,7 @@ export class SquadObjective {
         this.layer.hideLanes();
 
         if (App.userSettings.capZoneOnHover) this.capZone.hide();
+        previewMainbaseExclusion(this, false); // UBG
 
         this.layer.flags.forEach((flag) => {
             if (flag.isHidden) return;

@@ -36,6 +36,7 @@
         "showHeightDiff": "Height Difference",
     "LaneFinderOptions": "Layers Options", 
         "capZoneOnHover": "Only show capzones when hovering",
+        "mainbaseProtection": "Show Mainbase Protection Areas",
         "revealLayerOnHover" : "Reveal layer when hovering a flag",
         "circlesFlags": "Show Flags as circles",
         "copyNextFlags": "Auto-copy next flags to clipboard",

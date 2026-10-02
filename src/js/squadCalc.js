@@ -636,6 +636,7 @@ export default class SquadCalc {
      */
     loadTheme() {
         this.mainColor = getComputedStyle(document.documentElement).getPropertyValue("--main-color").trim();
+        this.mainColor = "firebrick"; // UBG: map overlays stay red, only the UI uses the purple theme
     }
 
 

@@ -40,6 +40,7 @@
         "showHeightDiff": "Yükseklik Farkı",
     "LaneFinderOptions": "Katman Seçenekleri", 
         "capZoneOnHover": "Ele Geçirme Bölgelerini Yalnızca Üzerine Gelindiğinde Göster",
+        "mainbaseProtection": "Show Mainbase Protection Areas",
         "revealLayerOnHover": "Bayrağın Üzerine Gelindiğinde Katmanı Göster",
         "circlesFlags": "Bayrakları Daire Olarak Göster",
         "copyNextFlags": "Sonraki Bayrakları Panoya Otomatik Kopyala",
